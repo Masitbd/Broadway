@@ -1,1 +1,11 @@
-<h1>Playsindex</h1>
+<h1>Plays inde pagex</h1>
+
+<% @plays.each do |play| %>
+    <h2> <%= link_to play.title, play_path(play) %></h2>
+
+ <%= play.description %>
+ <%= play.director %>
+  
+    <% end %>
+
+    <%= link_to "New play", new_play_path %>
