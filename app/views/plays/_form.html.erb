@@ -1,0 +1,8 @@
+<div class="col-md-8 offset-md-2">
+    <%= simple_form_for @play do |f| %>
+        <%= f.input :title, label: "play title" %>
+        <%= f.input :description, label: "Description of movie" %>
+        <%= f.input :director %>
+        <%= f.button :submit, class: "btn btn-primary" %>
+    <% end %>
+    </div>  
