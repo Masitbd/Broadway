@@ -1,5 +1,7 @@
 <div class="col-md-8 offset-md-2">
     <%= simple_form_for @play do |f| %>
+        <%= select_tag(:category_id, options_for_select(@categories), 
+        :prompt => "Select a category")  %>
         <%= f.input :title, label: "play title" %>
         <%= f.input :description, label: "Description of movie" %>
         <%= f.input :director %>
