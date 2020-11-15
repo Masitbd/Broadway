@@ -1,11 +1,9 @@
 <h1>Plays inde pagex</h1>
 
 <% @plays.each do |play| %>
-    <h2> <%= link_to play.title, play_path(play) %></h2>
-
- <%= play.description %>
+    <%= play.description %>
  <%= play.director %>
-  
+ <h2> <%= link_to play.title, play_path(play) %></h2>
     <% end %>
 
     
