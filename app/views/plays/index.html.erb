@@ -1,16 +1,11 @@
 <h1>Plays inde pagex</h1>
 <div class="current-category"><%= params[:category] %></div>
-
 <% if @plays.count == 0 %>
-
-     <h3>There are no plays in the category</h3>
-
+<h3>There are no plays in the category</h3>
 <% else %>
-
-      <% @plays.each do |play| %>
+  <% @plays.each do |play| %>
       <%= play.description %>
       <%= play.director %>
       <h2> <%= link_to play.title, play_path(play) %></h2>
       <% end %>
-
 <% end %>

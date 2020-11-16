@@ -1,7 +1,8 @@
 <div class="col-md-8 offset-md-2">
-    <%= simple_form_for @play do |f| %>
+    <%= simple_form_for @play, html: { multipart: true } do |f| %>
+        <%= f.file_field :play_img %>
         <%= select_tag(:category_id, options_for_select(@categories), 
-        :prompt => "Select a category")  %>
+        :prompt => "Select a category")  %> 
         <%= f.input :title, label: "play title" %>
         <%= f.input :description, label: "Description of movie" %>
         <%= f.input :director %>

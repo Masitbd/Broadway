@@ -19,11 +19,15 @@ class PlaysController < ApplicationController
    end
 
   def create
+    
     @play= current_user.plays.build(play_params)  
     @play.category_id = params[:category_id]
     if @play.save
       redirect_to root_path
-    end
+  
+  else
+    render 'new' 
+  end
   end
 
   def edit
@@ -47,7 +51,7 @@ class PlaysController < ApplicationController
   private
   
   def play_params
-    params.require(:play).permit(:title, :description, :director, :category_id)
+    params.require(:play).permit(:title, :description, :director, :category_id, :play_img)
   end
 
   def find_play

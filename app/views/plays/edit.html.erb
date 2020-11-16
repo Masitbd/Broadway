@@ -1,6 +1,8 @@
 <h1>Plays edit page</h1>
+<<<<<<< HEAD
 <div class="col-md-8 offset-md-2">
     <%= simple_form_for @play, html: {multipart: true} do |f| %>
+        <%= f.file_field :play_img %>
         <%= f.select :category_id, @categories  %>
         <%= f.input :title, label: "play title" %>
         <%= f.input :description, label: "Description of movie" %>
@@ -8,3 +10,6 @@
         <%= f.button :submit, class: "btn btn-primary" %>
     <% end %>
     </div>  
+=======
+<%= render 'form' %>
+>>>>>>> parent of 0078ba7... Add dropdown
