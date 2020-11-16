@@ -1,4 +1,5 @@
 <h1>Plays inde pagex</h1>
+<<<<<<< HEAD
 <div class="current-category"><%= params[:category] %></div>
 <% if @plays.count == 0 %>
 <h3>There are no plays in the category</h3>
@@ -9,3 +10,15 @@
       <h2> <%= link_to play.title, play_path(play) %></h2>
       <% end %>
 <% end %>
+=======
+
+<% @plays.each do |play| %>
+    <h2> <%= link_to play.title, play_path(play) %></h2>
+
+ <%= play.description %>
+ <%= play.director %>
+  
+    <% end %>
+
+    
+>>>>>>> parent of 0078ba7... Add dropdown
